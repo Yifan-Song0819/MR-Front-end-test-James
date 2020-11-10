@@ -17,7 +17,10 @@ export class ProductDescriptionComponent implements OnInit {
   public totalProductsAndQuantities: any = {
                                             "S": 0, 
                                             "M": 0, 
-                                            "L": 0
+                                            "L": 0,
+                                            "productName": "",
+                                            "productSymbol": "",
+                                            "productPrice": ""
                                            };
   
   constructor(private cartService: cartService) { }
@@ -27,6 +30,13 @@ export class ProductDescriptionComponent implements OnInit {
     this.productSymbol = "$";
     this.productPrice = "75.00";
     this.productDestription = "Dolor sit amet, consectetur adipiscing elit. Haec et tu ita posuisti, et verba vestra sunt. Quod autem ratione actum est, id officium appellamus dolor sit amet, consectetur adipiscing elit. Haec et tu ita posuisti, et verba vestra sunt. Quod autem ratione actum est, id officium appellamus";
+    this.initDataToTotalObject();
+  }
+
+  public initDataToTotalObject(): void {
+    this.totalProductsAndQuantities["productName"] = this.productName;
+    this.totalProductsAndQuantities["productSymbol"] = this.productSymbol;
+    this.totalProductsAndQuantities["productPrice"] = this.productPrice;
   }
 
   public pickSize(pickedSize: string): void {
