@@ -1,5 +1,6 @@
 import { summaryForJitName } from '@angular/compiler/src/aot/util';
 import { Component, OnInit } from '@angular/core';
+import { cartService } from '../services/cartService';
 
 @Component({
   selector: 'app-product-description',
@@ -18,8 +19,8 @@ export class ProductDescriptionComponent implements OnInit {
                                             "M": 0, 
                                             "L": 0
                                            };
-
-  constructor() { }
+  
+  constructor(private cartService: cartService) { }
 
   ngOnInit(): void {
     this.productName = "Classic Tee";
@@ -36,13 +37,22 @@ export class ProductDescriptionComponent implements OnInit {
     if (this.currentSize == ""){
       alert("Please choose the size first.");
     }else{
-
+      this.increaseQuantityOfPickedSize();
+      this.cartService.cartStatus.next(this.totalProductsAndQuantities);
     }
   }
 
   public test(): void {
-    for (let i = 0; i<3; i++){
-      console.log();
+    console.log(this.totalProductsAndQuantities);
+  }
+
+  public increaseQuantityOfPickedSize(): void {
+    if (this.currentSize == "S"){
+      this.totalProductsAndQuantities["S"] += 1;
+    }else if (this.currentSize == "M"){
+      this.totalProductsAndQuantities["M"] += 1;
+    }else{
+      this.totalProductsAndQuantities["L"] += 1;
     }
   }
 }

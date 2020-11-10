@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { cartService } from '../services/cartService';
 
 @Component({
   selector: 'app-main-page',
@@ -6,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent implements OnInit {
-
-  constructor() { }
+  public dropDownData: any;
+  public objectForDropdownCart: any = [];
+  constructor(private cartService: cartService) { }
 
   ngOnInit(): void {
+    this.cartService.cartStatus.subscribe(value => {
+        this.dropDownData = value;
+        console.log(this.dropDownData);
+
+      }
+    );
+  }
+
+  public mainTest(): void {
+    
   }
 
 }

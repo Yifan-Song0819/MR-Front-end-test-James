@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DemoMaterialModule } from './styles/demo-material-module';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductDescriptionComponent } from './product-description/product-description.component';
+import { cartService } from './services/cartService';
 
 @NgModule({
   declarations: [
@@ -21,9 +22,9 @@ import { ProductDescriptionComponent } from './product-description/product-descr
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    DemoMaterialModule
+    DemoMaterialModule,
   ],
-  providers: [],
+  providers: [cartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
