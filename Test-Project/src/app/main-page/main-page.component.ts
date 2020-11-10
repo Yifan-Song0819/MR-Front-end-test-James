@@ -16,6 +16,7 @@ export class MainPageComponent implements OnInit {
   public productName: string;
   public productSymbol: string;
   public productPrice: string;
+  public testBoolean: boolean = false;
 
   public imgUrl: string = "https://drive.google.com/file/d/0B8KYnbdnrRGXSXVoMzdqRWhCTXc/view?usp=sharing";
 
