@@ -8,12 +8,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { DemoMaterialModule } from './styles/demo-material-module';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductDescriptionComponent } from './product-description/product-description.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    ProductDescriptionComponent
   ],
   imports: [
     BrowserModule,
