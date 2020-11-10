@@ -1,3 +1,31 @@
-<p>{{productName}}</p>
-<p>{{productSymbol}}{{productPrice}}</p>
-<p>{{productDestription}}</p>
+<div>
+    <p>{{productName}}</p>
+</div>
+    <p>{{productSymbol}}{{productPrice}}</p>
+<div>
+    
+</div>
+
+<div>
+    <p>{{productDestription}}</p>
+</div>
+
+<div>
+    SIZE* {{currentSize}}
+</div>
+
+<div>
+    <button (click)="pickSize('S')">S</button>
+    <button (click)="pickSize('M')">M</button>
+    <button (click)="pickSize('L')">L</button>
+</div>
+
+<div>
+    <button mat-stroked-button color="primary" (click)="addToCart()">ADD TO CART</button>
+</div>
+
+<div>
+    <button (click)="test()">TEST</button>
+</div>
+
+

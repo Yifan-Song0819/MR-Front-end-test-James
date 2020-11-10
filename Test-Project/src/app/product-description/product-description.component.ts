@@ -11,6 +11,14 @@ export class ProductDescriptionComponent implements OnInit {
   public productSymbol: string;
   public productPrice: string;
   public productDestription: string;
+
+  public currentSize: string = "";
+  public totalProductsAndQuantities: any = {
+                                            "S": 0, 
+                                            "M": 0, 
+                                            "L": 0
+                                           };
+
   constructor() { }
 
   ngOnInit(): void {
@@ -20,4 +28,21 @@ export class ProductDescriptionComponent implements OnInit {
     this.productDestription = "Dolor sit amet, consectetur adipiscing elit. Haec et tu ita posuisti, et verba vestra sunt. Quod autem ratione actum est, id officium appellamus dolor sit amet, consectetur adipiscing elit. Haec et tu ita posuisti, et verba vestra sunt. Quod autem ratione actum est, id officium appellamus";
   }
 
+  public pickSize(pickedSize: string): void {
+    pickedSize != this.currentSize ? this.currentSize = pickedSize : this.currentSize = "";
+  }
+
+  public addToCart(): void {
+    if (this.currentSize == ""){
+      alert("Please choose the size first.");
+    }else{
+
+    }
+  }
+
+  public test(): void {
+    for (let i = 0; i<3; i++){
+      console.log();
+    }
+  }
 }
