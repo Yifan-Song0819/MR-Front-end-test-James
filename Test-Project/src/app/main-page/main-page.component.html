@@ -1,6 +1,6 @@
 
 <div class="header">
-    <div>
+    <!-- <div>
         <button mat-button [matMenuTriggerFor]="menu">My Cart ({{this.totalQuantity}})</button>
             <mat-menu #menu="matMenu">
                 <button mat-menu-item>
@@ -13,21 +13,22 @@
 
                 </button>
             </mat-menu>
-    </div>
+    </div> -->
 
-    <div>
-        <div class="w3-container">
-            <div class="w3-dropdown-hover">London
-              <div class="w3-dropdown-content w3-card-4" style="width:250px">
-                <img src="img_london.jpg" alt="London" style="width:100%">
-                <div class="w3-container">
-                  <p>London is the capital city of England.</p>
-                  <p>It is the most populous city in the UK.</p>
-                </div>
-              </div>
+    
+    <div class="w3-container">
+        <div class="w3-dropdown-hover">My Cart ({{this.totalQuantity}})
+
+            <div class="w3-dropdown-content w3-card-4" style="width:250px">
+            <img src="{{imgUrl}}" alt="IMAGE" style="width:100%">
+            <div class="w3-container">
+                <p>{{productName}}</p>
+                <p>It is the most populous city in the UK.</p>
             </div>
+            </div>
+
         </div>
-    </div>
+    </div> 
 </div>
 
 <app-product-detail></app-product-detail>
