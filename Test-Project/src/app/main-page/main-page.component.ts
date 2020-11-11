@@ -26,7 +26,7 @@ export class MainPageComponent implements OnInit {
     this.initObjectForDropdownCart();
     this.cartService.cartStatus.subscribe(value => {
         this.dropDownData = value;
-        console.log(this.dropDownData);
+        // console.log(this.dropDownData);
         if (this.dropDownData != null){
           this.initProductDetails();
           this.transferDataToDropdownCart();
@@ -65,17 +65,14 @@ export class MainPageComponent implements OnInit {
     for (let i = 0; i < this.objectForDropdownCart.length; i++){
       if (this.objectForDropdownCart[i].ProductSize == "S"){
         this.objectForDropdownCart[i].Quantity = this.dropDownData["S"];
-        // this.totalQuantity += this.objectForDropdownCart[i].Quantity;
       }
 
       if (this.objectForDropdownCart[i].ProductSize == "M"){
         this.objectForDropdownCart[i].Quantity = this.dropDownData["M"];
-        // this.totalQuantity += this.objectForDropdownCart[i].Quantity;
       }
 
       if (this.objectForDropdownCart[i].ProductSize == "L"){
         this.objectForDropdownCart[i].Quantity = this.dropDownData["L"];
-        // this.totalQuantity += this.objectForDropdownCart[i].Quantity;
       }
     }
   }
