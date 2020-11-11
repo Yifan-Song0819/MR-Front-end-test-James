@@ -52,9 +52,7 @@ export class ProductDescriptionComponent implements OnInit {
     }
   }
 
-  public test(): void {
-    console.log(this.totalProductsAndQuantities);
-  }
+  
 
   public increaseQuantityOfPickedSize(): void {
     if (this.currentSize == "S"){

@@ -3,16 +3,6 @@
     <div class="w3-container">
         <div class="w3-dropdown-hover">My Cart ({{this.totalQuantity}})
             <div class="w3-dropdown-content w3-card-4" style="width:250px">
-                <img src="{{imgUrl}}" alt="IMAGE" style="width:100%">
-                <div class="w3-container">
-                    <p>{{productName}}</p>
-                    <p>It is the most populous city in the UK.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="w3-dropdown-hover">tEST
-            <div class="w3-dropdown-content w3-card-4" style="width:250px">
                 <div *ngFor="let product of objectForDropdownCart">
                     <div *ngIf="product.Quantity != 0">
                         <img src="{{imgUrl}}" alt="IMAGE" style="width:100%">
@@ -29,5 +19,3 @@
 </div>
 
 <app-product-detail></app-product-detail>
-
-<button (click)="mainTest()">Test main</button>
